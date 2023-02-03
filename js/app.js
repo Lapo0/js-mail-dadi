@@ -9,11 +9,11 @@ console.log(emailUtente)
 
 if (email.includes(emailUtente)) {
     console.log('La mail inserita è già presente nel database.')
-  } else {
-    email.push(emailUtente)
-    console.log(email)
-    console.log('La sua mail: "' + emailUtente + '" è stata inserita nel database.' )
-  }
+} else {
+email.push(emailUtente)
+console.log(email)
+console.log('La sua mail: "' + emailUtente + '" è stata inserita nel database.' )
+}
 
 
 // GIOCO DEI DADI
@@ -27,9 +27,9 @@ console.log('Il numero estratto dal computer è: ' + numeroRandomComputer)
 // Stabilire il vincitore in base al numero più alto
 
 if (numeroRandomUtente > numeroRandomComputer) {
-    console.log('Hai vinto')
+    console.log('Hai vinto :)')
 } else if (numeroRandomComputer > numeroRandomUtente){
-    console.log('Ha vinto il computer')
+    console.log('Ha vinto il computer :(')
 } else if (numeroRandomComputer === numeroRandomUtente) {
-    console.log('Wow c\'è stato un pareggio')
+    console.log('Wow c\'è stato un pareggio!!')
 }
