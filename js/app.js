@@ -10,6 +10,7 @@ console.log(emailUtente)
 
 email.push(emailUtente)
 console.log(email)
+console.log('La sua mail: "' + emailUtente + '" è stata inserita nel database.' )
 
 // Stampa un messaggio con esito controllo
 
