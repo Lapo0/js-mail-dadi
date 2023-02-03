@@ -38,6 +38,9 @@ if (mailEsistente) {
 // Giocare 10 partite
 const numeroPartite = parseInt( prompt('Quante partite vuoi giocare a Dadi?'))
 
+let vittorieUtente = 0
+let vittorieComputer = 0
+
 for (let i = 0; i < numeroPartite; i++) {
 
     // Creare un numero randomico da 1 a 6 per giocatore e per il computer
@@ -51,9 +54,13 @@ for (let i = 0; i < numeroPartite; i++) {
 
     if (numeroRandomUtente > numeroRandomComputer) {
         console.log('Hai vinto :)')
+        vittorieUtente++
     } else if (numeroRandomComputer > numeroRandomUtente){
         console.log('Ha vinto il computer :(')
+        vittorieComputer++
     } else if (numeroRandomComputer === numeroRandomUtente) {
         console.log('Wow c\'è stato un pareggio!!')
     }
 }
+
+console.log('Sul totale di: ' + numeroPartite + ' partite' + ' ne hai vinte ' + vittorieUtente + ' invece il computer ne ha vinte ' + vittorieComputer)
