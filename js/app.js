@@ -28,4 +28,6 @@ if (numeroRandomUtente > numeroRandomComputer) {
     console.log('Hai vinto')
 } else if (numeroRandomComputer > numeroRandomUtente){
     console.log('Ha vinto il computer')
+} else if (numeroRandomComputer === numeroRandomUtente) {
+    console.log('Wow c\'è stato un pareggio')
 }
