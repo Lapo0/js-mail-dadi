@@ -17,9 +17,15 @@ console.log('La sua mail: "' + emailUtente + '" è stata inserita nel database.'
 // GIOCO DEI DADI
 // Creare un numero randomico da 1 a 6 per giocatore e per il computer
 const numeroRandomUtente = Math.floor(Math.random() * 6 + 1)
-console.log(numeroRandomUtente)
+console.log('Il tuo numero è: ' + numeroRandomUtente)
 
 const numeroRandomComputer = Math.floor(Math.random() * 6 + 1)
-console.log(numeroRandomComputer)
+console.log('Il numero estratto dal computer è: ' + numeroRandomComputer)
 
 // Stabilire il vincitore in base al numero più alto
+
+if (numeroRandomUtente > numeroRandomComputer) {
+    console.log('Hai vinto')
+} else if (numeroRandomComputer > numeroRandomUtente){
+    console.log('Ha vinto il computer')
+}
