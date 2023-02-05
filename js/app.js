@@ -16,6 +16,14 @@ for (let i = 0; i < email.length; i++) {
   }
 }
 
+if (mailEsistente) {
+    console.log('La mail inserita è già presente nel database.')
+  } else {
+    email.push(emailUtente)
+    console.log(email)
+    console.log('La tua mail: "' + emailUtente + '" è stata inserita nel database.' )
+}
+
 /*
 if (email.includes(emailUtente)) {
     console.log('La mail inserita è già presente nel database.')
@@ -26,13 +34,6 @@ console.log('La sua mail: "' + emailUtente + '" è stata inserita nel database.'
 }
 */
 
-if (mailEsistente) {
-  console.log('La mail inserita è già presente nel database.')
-} else {
-  email.push(emailUtente)
-  console.log(email)
-  console.log('La sua mail: "' + emailUtente + '" è stata inserita nel database.' )
-}
 
 // GIOCO DEI DADI
 // Giocare 10 partite
@@ -40,6 +41,7 @@ const numeroPartite = parseInt( prompt('Quante partite vuoi giocare a Dadi?'))
 
 let vittorieUtente = 0
 let vittorieComputer = 0
+let pareggio = 0
 
 for (let i = 0; i < numeroPartite; i++) {
 
@@ -60,7 +62,8 @@ for (let i = 0; i < numeroPartite; i++) {
         vittorieComputer++
     } else if (numeroRandomComputer === numeroRandomUtente) {
         console.log('Wow c\'è stato un pareggio!!')
+        pareggio++
     }
 }
 
-console.log('Sul totale di: ' + numeroPartite + ' partite' + ' ne hai vinte ' + vittorieUtente + ' invece il computer ne ha vinte ' + vittorieComputer)
+console.log('Sul totale di: ' + numeroPartite + ' partite' + ' ne hai vinte ' + vittorieUtente + ' invece il computer ne ha vinte ' + vittorieComputer + ' e ci sono stati ' + pareggio + ' pareggi')
